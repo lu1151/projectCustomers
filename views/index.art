@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>Customer Information</title>
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+	<form action="/add" method="post">
+		<fieldset>
+			<legend>Customer Information</legend>
+			<label>
+				Name: <input class="normal" type="text" autofocus placeholder="Please enter your name" name="name">
+			</label>
+			<label>
+				Sex:
+				<input type="radio" value="0" name="sex"> Male
+				<input type="radio" value="1" name="sex"> Female
+			</label>
+			<label>
+				Birthday: <input type="date" class="normal" name="birthday">
+			</label>
+			<label>
+				Email: <input class="normal" type="text" placeholder="Please enter your Email" name="email">
+			</label>
+			<label>
+				Hobbies:
+				<input type="checkbox" value="Coding" name="hobbies"> Coding
+				<input type="checkbox" value="Cooking" name="hobbies"> Cooking
+				<input type="checkbox" value="Reading" name="hobbies"> Reading
+			</label>
+			<label class="btn">
+				<input type="submit" value="Submit" class="normal" name="">
+			</label>
+		</fieldset>
+	</form>
+</body>
+
+</html>

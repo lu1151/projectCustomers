@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Customer Records</title>
+	<link rel="stylesheet" href="./css/list.css">
+</head>
+
+<body>
+	<table>
+		<caption>Customer Records</caption>
+		<tr>
+			<th>Name</th>
+			<th>Sex</th>
+			<th>Email</th>
+			<th>Birthday</th>
+			<th>Hobbies</th>
+		</tr>
+		{{each customers}}
+		<tr>
+			<th>{{$value.name}}</th>
+			<th>{{$value.sex == "0" ? "Male" : "Female"}}</th>
+			<th>{{$value.email}}</th>
+			<th>{{dateformat($value.birthday, "yyyy-mm-dd")}}</th>
+			<th>
+			{{each $value.hobbies}}
+			<span>{{$value}}</span>
+			{{/each}}
+			</th>
+		</tr>
+		{{/each}}
+	</table>
+</body>
+
+</html>
